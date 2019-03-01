@@ -71,12 +71,16 @@ public class Topic_02_XPath {
 		driver.findElement(By.id("send2")).click();
 		
 		//1.468s
-//		String InvalidNotification = driver.findElement(By.xpath("//span[contains(text(), \"Invalid login or password.\")]")).getText();
+//		String InvalidNotification = driver.findElement(By.xpath("//span[contains(text(), 'Invalid login or password.')]")).getText();
 //		Assert.assertTrue(InvalidNotification.equals("Invalid login or password."));
 		
 		//1.388s
-		String InvalidNotification = driver.findElement(By.xpath("//li[@class=\"error-msg\"]/ul/li/span")).getText(); 
+		String InvalidNotification = driver.findElement(By.xpath("//li[@class='error-msg']/ul/li/span")).getText(); 
 		Assert.assertTrue(InvalidNotification.equals("Invalid login or password."));
+		
+		//1.928s
+//		String InvalidNotification = driver.findElement(By.xpath("//span[text()='Invalid login or password.']")).getText(); 
+//		Assert.assertTrue(InvalidNotification.equals("Invalid login or password."));
 		 
 	}
 	
